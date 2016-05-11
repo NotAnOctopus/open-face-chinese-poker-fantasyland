@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+
+<h3>Open Face Chinese Poker Fantasyland Thingy-Thing</h3>
+
+<p>ok so how this works is this. if you're playing open face chinese poker and you're in fantasyland and you're having an existential crisis about how to arrange your cards, this site is for you. click on 13 cards (for classic ofc) or 14 cards (for pineapple ofc) and hit submit, and it'll tell you how best to arrange your cards for maximum royalties.</p>
+
+<p>i really should add a feature that makes it take into account repeat fantasylands, but i don't know how much they're worth so i'll do that when i find it out. think it's worth like 8.5 in classic and like 7 in pineapple.</p>
+
+<p>13-card version takes like a second to compute, but the 14-card version takes like 20 seconds, so if you're doing the pineapple one and your browser tells you that a script is making it slow down, make it continue and you'll get your answer soon enough.</p>
+
+<p>this is LITERALLY THE FIRST WEBSITE I HAVE EVER DESIGNED. EVER. i literally only started doing javascript a few days ago. so if you have any criticisms about my code, like the quality of the nonexistent graphics, wait until next week if you want to yell at me.</p>
+
+<p> buttons are the only form of user input i've learnt so far. ultimately i'd like these to be clickable pictures of cards, and same with the output, but until i learn how to do that, or someone teaches me, it's going to stay this way.
+
+<!-- someone tell me how the fuck you do a for loop in html -->
+
+<br>
+<button type="button" id="02s" onclick="zebra('02s')">2 of spades</button>
+<button type="button" id="02h" onclick="zebra('02h')">2 of hearts</button>
+<button type="button" id="02d" onclick="zebra('02d')">2 of diamonds</button>
+<button type="button" id="02c" onclick="zebra('02c')">2 of clubs</button>
+<br>
+<button type="button" id="03s" onclick="zebra('03s')">3 of spades</button>
+<button type="button" id="03h" onclick="zebra('03h')">3 of hearts</button>
+<button type="button" id="02d" onclick="zebra('03d')">3 of diamonds</button>
+<button type="button" id="03c" onclick="zebra('03c')">3 of clubs</button>
+<br>
+<button type="button" id="04s" onclick="zebra('04s')">4 of spades</button>
+<button type="button" id="04h" onclick="zebra('04h')">4 of hearts</button>
+<button type="button" id="04d" onclick="zebra('04d')">4 of diamonds</button>
+<button type="button" id="04c" onclick="zebra('04c')">4 of clubs</button>
+<br>
+<button type="button" id="05s" onclick="zebra('05s')">5 of spades</button>
+<button type="button" id="05h" onclick="zebra('05h')">5 of hearts</button>
+<button type="button" id="05d" onclick="zebra('05d')">5 of diamonds</button>
+<button type="button" id="05c" onclick="zebra('05c')">5 of clubs</button>
+<br>
+<button type="button" id="06s" onclick="zebra('06s')">6 of spades</button>
+<button type="button" id="06h" onclick="zebra('06h')">6 of hearts</button>
+<button type="button" id="06d" onclick="zebra('06d')">6 of diamonds</button>
+<button type="button" id="06c" onclick="zebra('06c')">6 of clubs</button>
+<br>
+<button type="button" id="07s" onclick="zebra('07s')">7 of spades</button>
+<button type="button" id="07h" onclick="zebra('07h')">7 of hearts</button>
+<button type="button" id="07d" onclick="zebra('07d')">7 of diamonds</button>
+<button type="button" id="07c" onclick="zebra('07c')">7 of clubs</button>
+<br>
+<button type="button" id="08s" onclick="zebra('08s')">8 of spades</button>
+<button type="button" id="08h" onclick="zebra('08h')">8 of hearts</button>
+<button type="button" id="08d" onclick="zebra('08d')">8 of diamonds</button>
+<button type="button" id="08c" onclick="zebra('08c')">8 of clubs</button>
+<br>
+<button type="button" id="09s" onclick="zebra('09s')">9 of spades</button>
+<button type="button" id="09h" onclick="zebra('09h')">9 of hearts</button>
+<button type="button" id="09d" onclick="zebra('09d')">9 of diamonds</button>
+<button type="button" id="09c" onclick="zebra('09c')">9 of clubs</button>
+<br>
+<button type="button" id="10s" onclick="zebra('10s')">10 of spades</button>
+<button type="button" id="10h" onclick="zebra('10h')">10 of hearts</button>
+<button type="button" id="10d" onclick="zebra('10d')">10 of diamonds</button>
+<button type="button" id="10c" onclick="zebra('10c')">10 of clubs</button>
+<br>
+<button type="button" id="11s" onclick="zebra('11s')">J of spades</button>
+<button type="button" id="11h" onclick="zebra('11h')">J of hearts</button>
+<button type="button" id="11d" onclick="zebra('11d')">J of diamonds</button>
+<button type="button" id="11c" onclick="zebra('11c')">J of clubs</button>
+<br>
+<button type="button" id="12s" onclick="zebra('12s')">Q of spades</button>
+<button type="button" id="12h" onclick="zebra('12h')">Q of hearts</button>
+<button type="button" id="12d" onclick="zebra('12d')">Q of diamonds</button>
+<button type="button" id="12c" onclick="zebra('12c')">Q of clubs</button>
+<br>
+<button type="button" id="13s" onclick="zebra('13s')">K of spades</button>
+<button type="button" id="13h" onclick="zebra('13h')">K of hearts</button>
+<button type="button" id="13d" onclick="zebra('13d')">K of diamonds</button>
+<button type="button" id="13c" onclick="zebra('13c')">K of clubs</button>
+<br>
+<button type="button" id="14s" onclick="zebra('14s')">A of spades</button>
+<button type="button" id="14h" onclick="zebra('14h')">A of hearts</button>
+<button type="button" id="14d" onclick="zebra('14d')">A of diamonds</button>
+<button type="button" id="14c" onclick="zebra('14c')">A of clubs</button>
+<br>
+<br>
+
+<button type="button" id="submit" onclick="thingything(cards)">submit</button>
+<button type="button" id="clear" onclick="bleurgh()">clear</button>
+
+<p id="something"></p>
+<p id="stuff"></p>
+
+<script src="poker fantasyland js thingy.js"></script>
+
+</body>
+</html>
