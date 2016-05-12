@@ -55,7 +55,7 @@ function emily_smells_bad(thingy) {
     return [3,+(thingy[0].slice(0,2))] // trips
   }
   else if (thingy[0].slice(0,2) == thingy[1].slice(0,2) || thingy[1].slice(0,2) == thingy[2].slice(0,2)) {
-    return [1,+(thingy[1].slice(0,2)),+(thingy[0].slice(0,2))++(thingy[2].slice(0,2))-+(thingy[1].slice(0,2))] // pair
+    return [1,+(thingy[1].slice(0,2)),+(thingy[0].slice(0,2))+ +(thingy[2].slice(0,2))- +(thingy[1].slice(0,2))] // pair
    }
   else {
     return [0,+(thingy[0].slice(0,2)),+(thingy[1].slice(0,2)),+(thingy[2].slice(0,2))]
