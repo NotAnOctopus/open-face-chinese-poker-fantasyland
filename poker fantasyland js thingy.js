@@ -52,13 +52,13 @@ function emily_smells_bad(thingy) {
   thingy.sort();
   thingy.reverse();
   if (thingy[0].slice(0,2) == thingy[1].slice(0,2) && thingy[1].slice(0,2) == thingy[2].slice(0,2)) {
-    return [3,parseInt(thingy[0].slice(0,2))] // trips
+    return [3,+(thingy[0].slice(0,2))] // trips
   }
   else if (thingy[0].slice(0,2) == thingy[1].slice(0,2) || thingy[1].slice(0,2) == thingy[2].slice(0,2)) {
-    return [1,parseInt(thingy[1].slice(0,2)),parseInt(thingy[0].slice(0,2))+parseInt(thingy[2].slice(0,2))-parseInt(thingy[1].slice(0,2))] // pair
+    return [1,+(thingy[1].slice(0,2)),+(thingy[0].slice(0,2))++(thingy[2].slice(0,2))-+(thingy[1].slice(0,2))] // pair
    }
   else {
-    return [0,parseInt(thingy[0].slice(0,2)),parseInt(thingy[1].slice(0,2)),parseInt(thingy[2].slice(0,2))]
+    return [0,+(thingy[0].slice(0,2)),+(thingy[1].slice(0,2)),+(thingy[2].slice(0,2))]
   }
 }
 
@@ -70,68 +70,68 @@ function emily_smells_bad(thingy) {
 function emily_stinks(thingy) {
   thingy.sort();
   thingy.reverse();
-  if (thingy[0].slice(0,2) == '14' && thingy[1].slice(0,2) == '13' && thingy[2].slice(0,2) == '12' && thingy[3].slice(0,2) == '11' && thingy[4].slice(0,2) == '10' && thingy[0].charAt(2) == thingy[1].charAt(2) && thingy[1].charAt(2) == thing[2].charAt(2) && thingy[2].charAt(2) == thingy[3].charAt(2) && thingy[3].charAt(2) == thingy[4].charAt(2)) {
+  if (thingy[0].slice(0,2) == '14' && thingy[1].slice(0,2) == '13' && thingy[2].slice(0,2) == '12' && thingy[3].slice(0,2) == '11' && thingy[4].slice(0,2) == '10' && thingy[0].charAt(2) == thingy[1].charAt(2) && thingy[1].charAt(2) == thingy[2].charAt(2) && thingy[2].charAt(2) == thingy[3].charAt(2) && thingy[3].charAt(2) == thingy[4].charAt(2)) {
     return [9] // Royal flush
   }
-  else if (parseInt(thingy[0].slice(0,2)) - parseInt(thingy[1].slice(0,2)) == 1 && parseInt(thingy[1].slice(0,2)) - parseInt(thingy[2].slice(0,2)) == 1 && parseInt(thingy[2].slice(0,2)) - parseInt(thingy[3].slice(0,2)) == 1 && parseInt(thing[3].slice(0,2)) - parseInt(thingy[4].slice(0,2)) == 1 && thingy[0].charAt(2) == thingy[1].charAt(2) && thingy[1].charAt(2) == thingy[2].charAt(2) && thingy[2].charAt(2) == thingy[3].charAt(2) && thingy[3].charAt(2) == thingy[4].charAt(2)) {
-    return [8, parseInt(thingy[0].slice(0,2))] // straight flush
+  else if (+(thingy[0].slice(0,2)) - +(thingy[1].slice(0,2)) == 1 && +(thingy[1].slice(0,2)) - +(thingy[2].slice(0,2)) == 1 && +(thingy[2].slice(0,2)) - +(thingy[3].slice(0,2)) == 1 && +(thingy[3].slice(0,2)) - +(thingy[4].slice(0,2)) == 1 && thingy[0].charAt(2) == thingy[1].charAt(2) && thingy[1].charAt(2) == thingy[2].charAt(2) && thingy[2].charAt(2) == thingy[3].charAt(2) && thingy[3].charAt(2) == thingy[4].charAt(2)) {
+    return [8, +(thingy[0].slice(0,2))] // straight flush
   }
   else if (thingy[0].slice(0,2) == '14' && thingy[1].slice(0,2) == '05' && thingy[2].slice(0,2)== '04' && thingy[3].slice(0,2) == '03' && thingy[4].slice(0,2) == '02' && thingy[0].charAt(2) == thingy[1].charAt(2) && thingy[1].charAt(2) == thingy[2].charAt(2) && thingy[2].charAt(2) == thingy[3].charAt(2) && thingy[3].charAt(2) == thingy[4].charAt(2)) {
     return [8, 5] // wheel straight flush
   }
   else if (thingy[0].slice(0,2) == thingy[1].slice(0,2) && thingy[1].slice(0,2) == thingy[2].slice(0,2) && thingy[2].slice(0,2) == thingy[3].slice(0,2)) {
-    return [7, parseInt(thingy[0].slice(0,2)), parseInt(thingy[4].slice(0,2))] // quads
+    return [7, +(thingy[0].slice(0,2)), +(thingy[4].slice(0,2))] // quads
   }
   else if (thingy[1].slice(0,2) == thingy[2].slice(0,2) && thingy[2].slice(0,2) == thingy[3].slice(0,2) && thingy[3].slice(0,2) == thingy[4].slice(0,2)) {
-    return [7, parseInt(thingy[1].slice(0,2)), parseInt(thingy[0].slice(0,2))] // quads
+    return [7, +(thingy[1].slice(0,2)), +(thingy[0].slice(0,2))] // quads
   }
   else if (thingy[0].slice(0,2) == thingy[1].slice(0,2) && thingy[1].slice(0,2) == thingy[2].slice(0,2) && thingy[3].slice(0,2) == thingy[4].slice(0,2)) {
-    return [6, parseInt(thingy[0].slice(0,2)), parseInt(thingy[3].slice(0,2))] // full
+    return [6, +(thingy[0].slice(0,2)), +(thingy[3].slice(0,2))] // full
   }
   else if (thingy[0].slice(0,2) == thingy[1].slice(0,2) && thingy[2].slice(0,2) == thingy[3].slice(0,2) && thingy[3].slice(0,2) == thingy[4].slice(0,2)) {
-    return [6, parseInt(thingy[2].slice(0,2)), parseInt(thingy[0].slice(0,2))] // full
+    return [6, +(thingy[2].slice(0,2)), +(thingy[0].slice(0,2))] // full
   }
   else if (thingy[0].charAt(2) == thingy[1].charAt(2) && thingy[1].charAt(2) == thingy[2].charAt(2) && thingy[2].charAt(2) == thingy[3].charAt(2) && thingy[3].charAt(2) == thingy[4].charAt(2)) {
-    return [5, parseInt(thingy[0].slice(0,2)), parseInt(thingy[1].slice(0,2)), parseInt(thingy[2].slice(0,2)), parseInt(thingy[3].slice(0,2)), parseInt(thingy[4].slice(0,2))] // flush
+    return [5, +(thingy[0].slice(0,2)), +(thingy[1].slice(0,2)), +(thingy[2].slice(0,2)), +(thingy[3].slice(0,2)), +(thingy[4].slice(0,2))] // flush
   }
-  else if (parseInt(thingy[0].slice(0,2)) - parseInt(thingy[1].slice(0,2)) == 1 && parseInt(thingy[1].slice(0,2)) - parseInt(thingy[2].slice(0,2)) == 1 && parseInt(thingy[2].slice(0,2)) - parseInt(thingy[3].slice(0,2)) == 1 && parseInt(thingy[3].slice(0,2)) - parseInt(thingy[4].slice(0,2)) == 1) {
-    return [4, parseInt(thingy[0].slice(0,2))] // straight
+  else if (+(thingy[0].slice(0,2)) - +(thingy[1].slice(0,2)) == 1 && +(thingy[1].slice(0,2)) - +(thingy[2].slice(0,2)) == 1 && +(thingy[2].slice(0,2)) - +(thingy[3].slice(0,2)) == 1 && +(thingy[3].slice(0,2)) - +(thingy[4].slice(0,2)) == 1) {
+    return [4, +(thingy[0].slice(0,2))] // straight
   }
   else if (thingy[0].slice(0,2) == '14' && thingy[1].slice(0,2) == '05' && thingy[2].slice(0,2)== '04' && thingy[3].slice(0,2) == '03' && thingy[4].slice(0,2) == '02') {
     return [4, 5] // wheel straight
   }
   else if (thingy[0].slice(0,2) == thingy[1].slice(0,2) && thingy[1].slice(0,2) == thingy[2].slice(0,2)) {
-    return [3, parseInt(thingy[0].slice(0,2)), parseInt(thingy[3].slice(0,2)), parseInt(thingy[4].slice(0,2))] // trips
+    return [3, +(thingy[0].slice(0,2)), +(thingy[3].slice(0,2)), +(thingy[4].slice(0,2))] // trips
   }
   else if (thingy[1].slice(0,2) == thingy[2].slice(0,2) && thingy[2].slice(0,2) == thingy[3].slice(0,2)) {
-    return [3, parseInt(thingy[1].slice(0,2)), parseInt(thingy[0].slice(0,2)), parseInt(thingy[4].slice(0,2))] // trips
+    return [3, +(thingy[1].slice(0,2)), +(thingy[0].slice(0,2)), +(thingy[4].slice(0,2))] // trips
   }
   else if (thingy[2].slice(0,2) == thingy[3].slice(0,2) && thingy[3].slice(0,2) == thingy[4].slice(0,2)) {
-    return [3, parseInt(thingy[2].slice(0,2)), parseInt(thingy[0].slice(0,2)), parseInt(thingy[1].slice(0,2))] // trips
+    return [3, +(thingy[2].slice(0,2)), +(thingy[0].slice(0,2)), +(thingy[1].slice(0,2))] // trips
   }
   else if (thingy[0].slice(0,2) == thingy[1].slice(0,2) && thingy[2].slice(0,2) == thingy[3].slice(0,2)) {
-    return [2, parseInt(thingy[0].slice(0,2)), parseInt(thingy[2].slice(0,2)), parseInt(thingy[4].slice(0,2))] // twopair
+    return [2, +(thingy[0].slice(0,2)), +(thingy[2].slice(0,2)), +(thingy[4].slice(0,2))] // twopair
   }
   else if (thingy[0].slice(0,2) == thingy[1].slice(0,2) && thingy[3].slice(0,2) == thingy[4].slice(0,2)) {
-    return [2, parseInt(thingy[0].slice(0,2)), parseInt(thingy[3].slice(0,2)), parseInt(thingy[2].slice(0,2))] // twopair
+    return [2, +(thingy[0].slice(0,2)), +(thingy[3].slice(0,2)), +(thingy[2].slice(0,2))] // twopair
   }
   else if (thingy[1].slice(0,2) == thingy[2].slice(0,2) && thingy[3].slice(0,2) == thingy[4].slice(0,2)) {
-    return [2, parseInt(thingy[1].slice(0,2)), parseInt(thingy[3].slice(0,2)), parseInt(thingy[0].slice(0,2))] // twopair
+    return [2, +(thingy[1].slice(0,2)), +(thingy[3].slice(0,2)), +(thingy[0].slice(0,2))] // twopair
   }
   else if (thingy[0].slice(0,2) == thingy[1].slice(0,2)) {
-    return [1, parseInt(thingy[0].slice(0,2)), parseInt(thingy[2].slice(0,2)), parseInt(thingy[3].slice(0,2)), parseInt(thingy[4].slice(0,2))] // pair
+    return [1, +(thingy[0].slice(0,2)), +(thingy[2].slice(0,2)), +(thingy[3].slice(0,2)), +(thingy[4].slice(0,2))] // pair
   }
   else if (thingy[1].slice(0,2) == thingy[2].slice(0,2)) {
-    return [1, parseInt(thingy[1].slice(0,2)), parseInt(thingy[0].slice(0,2)), parseInt(thingy[3].slice(0,2)), parseInt(thingy[4].slice(0,2))] // pair
+    return [1, +(thingy[1].slice(0,2)), +(thingy[0].slice(0,2)), +(thingy[3].slice(0,2)), +(thingy[4].slice(0,2))] // pair
   }
   else if (thingy[2].slice(0,2) == thingy[3].slice(0,2)) {
-    return [1, parseInt(thingy[2].slice(0,2)), parseInt(thingy[0].slice(0,2)), parseInt(thingy[1].slice(0,2)), parseInt(thingy[4].slice(0,2))] // pair
+    return [1, +(thingy[2].slice(0,2)), +(thingy[0].slice(0,2)), +(thingy[1].slice(0,2)), +(thingy[4].slice(0,2))] // pair
   }
   else if (thingy[3].slice(0,2) == thingy[4].slice(0,2)) {
-    return [1, parseInt(thingy[3].slice(0,2)), parseInt(thingy[0].slice(0,2)), parseInt(thingy[1].slice(0,2)), parseInt(thingy[2].slice(0,2))] // pair
+    return [1, +(thingy[3].slice(0,2)), +(thingy[0].slice(0,2)), +(thingy[1].slice(0,2)), +(thingy[2].slice(0,2))] // pair
   }
   else {
-    return [0, parseInt(thingy[0].slice(0,2)), parseInt(thingy[1].slice(0,2)), parseInt(thingy[2].slice(0,2)), parseInt(thingy[3].slice(0,2)), parseInt(thingy[4].slice(0,2))] // high card
+    return [0, +(thingy[0].slice(0,2)), +(thingy[1].slice(0,2)), +(thingy[2].slice(0,2)), +(thingy[3].slice(0,2)), +(thingy[4].slice(0,2))] // high card
   }
 };
 
