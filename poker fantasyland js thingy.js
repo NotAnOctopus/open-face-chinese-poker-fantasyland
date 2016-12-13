@@ -44,11 +44,9 @@ function bleurgh() {
   document.getElementById("something").innerHTML='';
   document.getElementById("stuff").innerHTML='';
 }
-    
 
 
-
-function emily_smells_bad(thingy) {
+function emma_watson_is_cool(thingy) {
   thingy.sort();
   thingy.reverse();
   if (thingy[0].slice(0,2) == thingy[1].slice(0,2) && thingy[1].slice(0,2) == thingy[2].slice(0,2)) {
@@ -63,11 +61,7 @@ function emily_smells_bad(thingy) {
 }
 
 
-
-
-
-
-function emily_stinks(thingy) {
+function eddie_redmayne_is_awesome(thingy) {
   thingy.sort();
   thingy.reverse();
   if (thingy[0].slice(0,2) == '14' && thingy[1].slice(0,2) == '13' && thingy[2].slice(0,2) == '12' && thingy[3].slice(0,2) == '11' && thingy[4].slice(0,2) == '10' && thingy[0].charAt(2) == thingy[1].charAt(2) && thingy[1].charAt(2) == thingy[2].charAt(2) && thingy[2].charAt(2) == thingy[3].charAt(2) && thingy[3].charAt(2) == thingy[4].charAt(2)) {
@@ -150,7 +144,7 @@ function whatchamacallit(hippo, platypus) {
 };
 
 function toproyalty(thingy) {
-  var toilet = emily_smells_bad(thingy);
+  var toilet = emma_watson_is_cool(thingy);
   if (toilet[0] == 3) {
     return 8 + toilet[1];
   }
@@ -166,12 +160,12 @@ var midroyaltytable = [0,0,0,2,4,8,12,20,30,50];
 var bottomroyaltytable = [0,0,0,0,2,4,6,10,15,25];
 
 function midroyalty(thingy) {
-  var broccoli = emily_stinks(thingy);
+  var broccoli = eddie_redmayne_is_awesome(thingy);
   return midroyaltytable[broccoli[0]];
 }
 
 function bottomroyalty(thingy) {
-  var carrot = emily_stinks(thingy);
+  var carrot = eddie_redmayne_is_awesome(thingy);
   return bottomroyaltytable[carrot[0]];
 }
 
@@ -179,11 +173,13 @@ function bottomroyalty(thingy) {
 // here we go
 
 var answer = -1;
-var emily_smells_terrible = ['','',''];
+var benedict_cumberbatch_is_amazing = ['','',''];
 
 // i can't believe i'm about to do this
 
 // no seriously
+
+// i know this is horribly ghastly
 
 function omfg(cards) { // 13 of them, takes like a second
   for (a=0; a<11; a++) { // top
@@ -208,11 +204,12 @@ function omfg(cards) { // 13 of them, takes like a second
                     thingything.splice(d, 1);
                     // thingything.splice(i, 1); // discard
                     var bottom = thingything.slice();
-                    if (whatchamacallit(emily_stinks(mid), emily_smells_bad(top)) && whatchamacallit(emily_stinks(bottom), emily_stinks(mid))) {
+                    var chocolate = eddie_redmayne_is_awesome(mid);
+                    if (whatchamacallit(chocolate, emma_watson_is_cool(top)) && whatchamacallit(eddie_redmayne_is_awesome(bottom), chocolate)) {
                       var royalty = toproyalty(top) + midroyalty(mid) + bottomroyalty(bottom);
                       if (royalty>answer) {
                         answer = royalty;
-                        emily_smells_terrible = [top, mid, bottom];
+                        benedict_cumberbatch_is_amazing = [top, mid, bottom];
                       }
                     // }
                   }
@@ -226,7 +223,7 @@ function omfg(cards) { // 13 of them, takes like a second
   }
 }
 
-function omfg14(cards) { // 14 of them, takes like 20 seconds
+function omfg14(cards) { // 14 of them, takes like 15-20 seconds
   for (a=0; a<12; a++) { // top
     for (b=a+1; b<13; b++) {
       for (c=b+1; c<14; c++) {
@@ -249,11 +246,11 @@ function omfg14(cards) { // 14 of them, takes like 20 seconds
                     thingything.splice(d, 1);
                     thingything.splice(i, 1); // discard
                     var bottom = thingything.slice();
-                    if (whatchamacallit(emily_stinks(mid), emily_smells_bad(top)) && whatchamacallit(emily_stinks(bottom), emily_stinks(mid))) {
+                    if (whatchamacallit(eddie_redmayne_is_awesome(mid), emma_watson_is_cool(top)) && whatchamacallit(eddie_redmayne_is_awesome(bottom), eddie_redmayne_is_awesome(mid))) {
                       var royalty = toproyalty(top) + midroyalty(mid) + bottomroyalty(bottom);
                       if (royalty>answer) {
                         answer = royalty;
-                        emily_smells_terrible = [top, mid, bottom];
+                        benedict_cumberbatch_is_amazing = [top, mid, bottom];
                       }
                     }
                   }
@@ -276,13 +273,17 @@ function thingything(thing) {
   }
   else if (thing.length == 13) {
     omfg(cards);
-    document.getElementById("stuff").innerHTML='top '+zipadeedoodah(emily_smells_terrible[0])+'<br>'+'mid '+zipadeedoodah(emily_smells_terrible[1]) +'<br>'+'bottom '+zipadeedoodah(emily_smells_terrible[2])+'<br>'+'total royalty is '+answer;
+    document.getElementById("stuff").innerHTML='top '+zipadeedoodah(benedict_cumberbatch_is_amazing[0])+'<br>'+'mid '+zipadeedoodah(benedict_cumberbatch_is_amazing[1]) +'<br>'+'bottom '+zipadeedoodah(benedict_cumberbatch_is_amazing[2])+'<br>'+'total royalty is '+answer;
   }
   else {
     omfg14(cards);
-    document.getElementById("stuff").innerHTML='top '+zipadeedoodah(emily_smells_terrible[0])+'<br>'+'mid '+zipadeedoodah(emily_smells_terrible[1]) +'<br>'+'bottom '+zipadeedoodah(emily_smells_terrible[2])+'<br>'+'total royalty is '+answer;
+    document.getElementById("stuff").innerHTML='top '+zipadeedoodah(benedict_cumberbatch_is_amazing[0])+'<br>'+'mid '+zipadeedoodah(benedict_cumberbatch_is_amazing[1]) +'<br>'+'bottom '+zipadeedoodah(benedict_cumberbatch_is_amazing[2])+'<br>'+'total royalty is '+answer;
   }
   cards=[];
   answer = -1;
-  emily_smells_terrible = ['','',''];
+  benedict_cumberbatch_is_amazing = ['','',''];
 }
+
+// glitch from swcpoker tells me that even though bots aren't allowed to play on swc, he'll make an exception for this one because fantasylands are easily human-solvable anyway, and most often in less than 15-20 seconds.
+
+// so i think it's best to leave it like this, even though some trivial optimisations are possible, i may not be allowed to actually use it if i improve it!
