@@ -246,7 +246,8 @@ function omfg14(cards) { // 14 of them, takes like 15-20 seconds
                     thingything.splice(d, 1);
                     thingything.splice(i, 1); // discard
                     var bottom = thingything.slice();
-                    if (whatchamacallit(eddie_redmayne_is_awesome(mid), emma_watson_is_cool(top)) && whatchamacallit(eddie_redmayne_is_awesome(bottom), eddie_redmayne_is_awesome(mid))) {
+                    var cheesecake = eddie_redmayne_is_awesome(mid);
+                    if (whatchamacallit(cheesecake, emma_watson_is_cool(top)) && whatchamacallit(eddie_redmayne_is_awesome(bottom), cheesecake)) {
                       var royalty = toproyalty(top) + midroyalty(mid) + bottomroyalty(bottom);
                       if (royalty>answer) {
                         answer = royalty;
